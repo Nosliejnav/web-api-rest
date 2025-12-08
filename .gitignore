@@ -1,33 +1,87 @@
-HELP.md
+# -------------------------------------------
+# MAVEN / JAVA
+# -------------------------------------------
 target/
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# Maven Wrapper JAR (gera em runtime, não precisa subir)
 .mvn/wrapper/maven-wrapper.jar
+
+# Evitar duplicação de builds em submódulos
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# -------------------------------------------
+# IDEs (IntelliJ, Eclipse, NetBeans, VS Code)
+# -------------------------------------------
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
 
+# Cache do IntelliJ
+out/
+
+### Eclipse ###
+.project
+.classpath
+.settings/
+.apt_generated/
+.factorypath
+.springBeans
+.sts4-cache/
+
 ### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
+
+# -------------------------------------------
+# SISTEMA OPERACIONAL
+# -------------------------------------------
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# -------------------------------------------
+# LOGS E TEMPORÁRIOS
+# -------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# -------------------------------------------
+# OUTROS
+# -------------------------------------------
+
+# Arquivos de ambiente
+.env
+.env.*
