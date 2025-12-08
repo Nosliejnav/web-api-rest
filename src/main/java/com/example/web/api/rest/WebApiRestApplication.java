@@ -1,4 +1,4 @@
-package com.example.web_api_rest;
+package com.example.web.api.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.example.web_api_rest;
+package com.example.web.api.rest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
