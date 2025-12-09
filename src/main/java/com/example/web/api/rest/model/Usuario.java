@@ -8,14 +8,11 @@ public class Usuario {
     public Usuario( ) {
     }
 
-    public Usuario(Integer id, String login, String password) {
-        this.id = id;
+    public Usuario(String login, String password) {
         this.login = login;
         this.password = password;
     }
 
-    public Usuario(String gleyson, String password) {
-    }
 
     @Override
     public String toString() {
