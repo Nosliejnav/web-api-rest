@@ -1,5 +1,7 @@
 package com.example.web.api.rest.repository;
 
+import com.example.web.api.rest.handler.BusinessException;
+import com.example.web.api.rest.handler.CampoObrigatorioException;
 import com.example.web.api.rest.model.Usuario;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +11,18 @@ import java.util.List;
 @Repository
 public class UsuarioRepository {
     public void save(Usuario usuario){
+
+        if (usuario.getLogin()==null)
+            throw new CampoObrigatorioException("login");
+//            throw new BusinessException("O campo login é obrigatório");
+//  O Que esta sendo usado sai com essa regra mais esta errado era Com a outra modo a anotação =
+// na GlobalExceptionHandler   //@RestControllerAdvice =
+//  throw new RuntimeException("O campo login é obrigatório");
+
+        if (usuario.getPassword()==null)
+            throw new CampoObrigatorioException("password");
+//            throw new BusinessException("O campo password é obrigatório");
+
         if(usuario.getId()==null)
             System.out.println("SAVE - Recebendo o usuário na camada de repositório");
         else
